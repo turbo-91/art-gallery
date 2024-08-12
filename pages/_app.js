@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import GlobalStyle from "../styles";
 import { SWRConfig } from "swr";
 import useSWR from "swr";
@@ -27,7 +28,15 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} pieces={data} />
+      <SWRConfig
+        value={{
+          fetcher,
+          refreshInterval: 1000,
+        }}
+      >
+        <Component {...pageProps} pieces={data} />
+        <Layout />
+      </SWRConfig>
     </>
   );
 }

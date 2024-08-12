@@ -1,5 +1,4 @@
 import Spotlight from "@/components/Spotlight";
-import Image from "next/image";
 
 export default function SpotlightPage({ pieces }) {
   if (!pieces || pieces.length === 0) {

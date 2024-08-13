@@ -22,8 +22,8 @@ export default function App({ Component, pageProps }) {
   const [artPiecesInfo, setArtPiecesInfo] = useState([]);
 
   useEffect(() => {
-    if (data && artPieces.length === 0) {
-      setArtPieces(data);
+    if (data && artPiecesInfo.length === 0) {
+      setArtPiecesInfo(data);
     }
   }, [data]);
 
@@ -37,21 +37,21 @@ export default function App({ Component, pageProps }) {
 
   function handleToggleFavorite(slug) {
     // See if the art piece is already in the array
-    const info = artPieces.find((art) => art.slug === slug);
+    const info = artPiecesInfo.find((art) => art.slug === slug);
     if (info) {
       // If the art piece is already in the array, toggle the isFavorite value
-      const newInfo = artPieces.map((artPiece) =>
+      const newInfo = artPiecesInfo.map((artPiece) =>
         artPiece.slug === slug
           ? { ...artPiece, isFavorite: !artPiece.isFavorite }
           : artPiece
       );
-      setArtPieces(newInfo);
-      console.log("afterClickIf", artPieces);
+      setArtPiecesInfo(newInfo);
+      console.log("afterClickIf", artPiecesInfo);
     } else {
       // If the art piece is not in the array already, add it with the favorite as true
-      const newInfo = [...artPieces, { slug, isFavorite: true }];
-      setArtPieces(newInfo);
-      console.log("afterClickElse", artPieces);
+      const newInfo = [...artPiecesInfo, { slug, isFavorite: true }];
+      setArtPiecesInfo(newInfo);
+      console.log("afterClickElse", artPiecesInfo);
     }
   }
 
@@ -64,7 +64,7 @@ export default function App({ Component, pageProps }) {
           refreshInterval: 1000,
         }}
       >
-        {artPieces.length > 0 ? (
+        {artPiecesInfo.length > 0 ? (
           <Component
             {...pageProps}
             pieces={isLoading || error ? [] : data}

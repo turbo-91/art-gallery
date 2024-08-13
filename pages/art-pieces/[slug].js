@@ -9,7 +9,7 @@ function getIsFavoriteStatus(piece, artPiecesInfo) {
   return hasFavoriteInfo ? hasFavoriteInfo.isFavorite : false;
 }
 
-function ArtPieceDetailPage({ pieces }) {
+function ArtPieceDetailPage({ pieces, onToggleFavorite, artPiecesInfo }) {
   // Dynamic Routing
   const router = useRouter();
   const { slug } = router.query;
@@ -23,6 +23,7 @@ function ArtPieceDetailPage({ pieces }) {
       year={currentPiece.year}
       genre={currentPiece.genre}
       isFavorite={isFavorite}
+      onToggleFavorite={onToggleFavorite}
     />
   );
 }

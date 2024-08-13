@@ -1,5 +1,5 @@
 import React from "react";
-import ArtPiecePreview from "../ArtPiecePreview";
+import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 import Link from "next/link";
 
 function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {

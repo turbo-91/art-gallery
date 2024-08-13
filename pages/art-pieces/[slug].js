@@ -1,4 +1,4 @@
-import ArtPieceDetail from "@/components/ArtPieceDetail";
+import ArtPieceDetail from "@/components/ArtPieceDetail/ArtPieceDetail";
 import React from "react";
 import { useRouter } from "next/router";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 
-function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {
+function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite, addComment }) {
   return (
     <>
       {pieces?.map((piece) => (
@@ -16,6 +16,7 @@ function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {
               ?.isFavorite
           }
           onToggleFavorite={() => onToggleFavorite(piece.slug)}
+          addComment={addComment}
         />
       ))}
     </>

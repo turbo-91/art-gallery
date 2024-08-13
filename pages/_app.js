@@ -55,6 +55,30 @@ export default function App({ Component, pageProps }) {
     }
   }
 
+  function addComment(slug, newComment) {
+    const artPiece = artPiecesInfo.find((piece) => piece.slug === slug); // find art piece with matching slug
+    if (artPiece) {
+      // if art piece exists already, check if art piece already has comments array and add comment depending on that to the existing or a new array
+      setArtPiecesInfo(
+        artPiecesInfo.map((pieceInfo) => {
+          if (pieceInfo.slug === slug) {
+            const updatedComments = pieceInfo.comments
+              ? [...pieceInfo.comments, newComment]
+              : [newComment];
+            return { ...pieceInfo, comments: updatedComments };
+          }
+          return pieceInfo;
+        })
+      );
+    } else {
+      // if art piece is not in artPiecesInfo add it to the array with slug, isFavorite and comments
+      setArtPiecesInfo([
+        ...artPiecesInfo,
+        { slug, isFavorite: false, comments: [newComment] },
+      ]);
+    }
+  }
+
   return (
     <>
       <GlobalStyle />
@@ -70,6 +94,7 @@ export default function App({ Component, pageProps }) {
             pieces={isLoading || error ? [] : data}
             artPiecesInfo={artPiecesInfo}
             onToggleFavorite={handleToggleFavorite}
+            addComment={addComment}
           />
         ) : (
           <div>Loading...</div>

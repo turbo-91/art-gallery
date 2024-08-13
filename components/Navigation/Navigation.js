@@ -6,6 +6,7 @@ function Navigation() {
     <>
       <Link href="/">Home</Link>
       <Link href="/art-pieces">Pieces</Link>
+      <Link href="/favorites">Favorites</Link>
     </>
   );
 }

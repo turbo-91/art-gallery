@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-function ArtPiecePreview({ image, title, artist }) {
+function ArtPiecePreview({ image, title, artist, slug, isFavorite }) {
   return (
     <>
       <Image alt={title} src={image} width={500} height={300}></Image>

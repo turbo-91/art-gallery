@@ -20,7 +20,9 @@ export default function App({ Component, pageProps }) {
   );
 
   /////// FAVOR ART PIECES /////////
-  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState([]);
+  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState("art-pieces", {
+    defaultValue: [],
+  });
 
   useEffect(() => {
     if (data && artPiecesInfo.length === 0) {

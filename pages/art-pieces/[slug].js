@@ -2,7 +2,7 @@ import ArtPieceDetail from "@/components/ArtPieceDetail/ArtPieceDetail";
 import React from "react";
 import { useRouter } from "next/router";
 
-function getIsFavoriteStatus(piece, artPiecesInfo) {
+function getIsFavoriteStatus(piece, artPiecesInfo, colors) {
   const hasFavoriteInfo = artPiecesInfo.find(
     (artPieceInfo) => artPieceInfo.slug === piece.slug
   );
@@ -31,6 +31,7 @@ function ArtPieceDetailPage({
       onToggleFavorite={onToggleFavorite}
       addComment={addComment}
       artPiecesInfo={artPiecesInfo}
+      colors={currentPiece.colors}
     />
   );
 }

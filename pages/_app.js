@@ -3,6 +3,7 @@ import GlobalStyle from "../styles";
 import { SWRConfig } from "swr";
 import useSWR from "swr";
 import { useEffect, useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 
 export default function App({ Component, pageProps }) {
   ////////// DATA FETCHING API ////////////
@@ -19,7 +20,7 @@ export default function App({ Component, pageProps }) {
   );
 
   /////// FAVOR ART PIECES /////////
-  const [artPiecesInfo, setArtPiecesInfo] = useState([]);
+  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState([]);
 
   useEffect(() => {
     if (data && artPiecesInfo.length === 0) {

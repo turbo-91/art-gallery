@@ -1,6 +1,10 @@
-import Spotlight from "@/components/Spotlight";
+import Spotlight from "@/components/Spotlight/Spotlight";
 
-export default function SpotlightPage({ pieces }) {
+export default function SpotlightPage({
+  pieces,
+  artPiecesInfo,
+  onToggleFavorite,
+}) {
   if (!pieces || pieces.length === 0) {
     return <div>Loading...</div>; // or any other fallback UI
   }
@@ -11,6 +15,11 @@ export default function SpotlightPage({ pieces }) {
       <Spotlight
         image={spotlightPiece.imageSource}
         artist={spotlightPiece.artist}
+        isFavorite={
+          artPiecesInfo.find((piece) => piece.slug === spotlightPiece.slug)
+            ?.isFavorite
+        }
+        onToggleFavorite={() => onToggleFavorite(spotlightPiece.slug)}
       />
     </>
   );

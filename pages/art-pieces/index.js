@@ -1,8 +1,14 @@
-import ArtPieces from "@/components/ArtPieces";
+import ArtPieces from "@/components/ArtPieces/ArtPieces";
 import React from "react";
 
-function ArtPiecesPage({ pieces }) {
-  return <ArtPieces pieces={pieces}></ArtPieces>;
+function ArtPiecesPage({ pieces, onToggleFavorite, isFavorite }) {
+  return (
+    <ArtPieces
+      pieces={pieces}
+      onToggleFavorite={onToggleFavorite}
+      isFavorite={isFavorite}
+    ></ArtPieces>
+  );
 }
 
 export default ArtPiecesPage;

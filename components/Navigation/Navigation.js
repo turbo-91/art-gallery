@@ -1,3 +1,5 @@
+Navigation.js;
+
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
@@ -34,7 +36,6 @@ const NavLink = styled(Link)`
   text-decoration: none;
   &:hover {
     transform: translateX(10px); /* Move 10px to the right */
-    // transition: transform 0.1s; /* Smooth transition for the movement */
   }
   @media (max-width: 390px) {
     font-size: 0.8em;
@@ -44,7 +45,7 @@ const NavLink = styled(Link)`
 function Navigation() {
   return (
     <NavBar>
-      <Title>ART GALLERY APP</Title>
+      <Title>ART GALLERY</Title>
       <NavLink href="/">Home</NavLink>
       <NavLink href="/art-pieces">Pieces</NavLink>
       <NavLink href="/favorites">Favorites</NavLink>

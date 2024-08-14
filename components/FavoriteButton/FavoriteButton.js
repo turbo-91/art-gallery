@@ -16,7 +16,11 @@ const Button = styled.button`
 function FavoriteButton({ isFavorite, onToggleFavorite }) {
   return (
     <Button onClick={onToggleFavorite}>
-      {isFavorite ? <BookmarkCheck size={50} /> : <Bookmark size={50} />}
+      {isFavorite ? (
+        <BookmarkCheck strokeWidth={1} size={50} />
+      ) : (
+        <Bookmark strokeWidth={1} size={40} />
+      )}
     </Button>
   );
 }

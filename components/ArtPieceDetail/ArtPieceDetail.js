@@ -14,6 +14,48 @@ const Color = styled.li`
   border-radius: 20%;
 `;
 
+const Section = styled.section`
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1vw;
+  padding-bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid black;
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+`;
+
+const IconWrapper = styled.div`
+  position: absolute;
+  top: 1vh;
+  right: 10px;
+  z-index: 1; /* Ensures the button layers above the image */
+`;
+
+const Title = styled.h2`
+  font-family: Helvetica, Arial;
+  font-size: 1em;
+  margin-bottom: 1px;
+  color: #001233;
+  text-align: justify;
+`;
+
+const Artist = styled.h1`
+  font-family: Helvetica, Arial;
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  color: #001233;
+  text-align: justify;
+`;
+
 function ArtPieceDetail({
   image,
   title,
@@ -35,10 +77,25 @@ function ArtPieceDetail({
   const comments = getCommentsForArtPiece(slug, artPiecesInfo);
 
   return (
-    <>
-      <Image alt={title} src={image} width={300} height={400} />
-      <h2>{title}</h2>
-      <h3>{artist}</h3>
+    <Section>
+      <ImageWrapper>
+        <Image
+          layout="responsive"
+          alt={title}
+          src={image}
+          width={300}
+          height={300}
+        />
+        <IconWrapper>
+          <FavoriteButton
+            isFavorite={isFavorite}
+            onToggleFavorite={onToggleFavorite}
+          />
+        </IconWrapper>
+      </ImageWrapper>
+
+      <Title>{title}</Title>
+      <Artist>{artist}</Artist>
       <p>
         {year}, {genre}
       </p>
@@ -58,7 +115,7 @@ function ArtPieceDetail({
         ))}
       </li>
       <Link href="/art-pieces">Back</Link>
-    </>
+    </Section>
   );
 }
 

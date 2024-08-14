@@ -14,7 +14,6 @@ function FavoritesPage({
   );
   return (
     <div>
-      <h2>Your favorite Art Pieces:</h2>
       <ArtPieces
         pieces={favorites}
         onToggleFavorite={onToggleFavorite}

@@ -1,9 +1,17 @@
 import React from "react";
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
+import styled from "styled-components";
+
+const Container = styled.div`
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1vw;
+  padding-bottom: 6vh;
+`;
 
 function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite, addComment }) {
   return (
-    <>
+    <Container>
       {pieces?.map((piece) => (
         <ArtPiecePreview
           key={piece.slug}
@@ -19,7 +27,7 @@ function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite, addComment }) {
           addComment={addComment}
         />
       ))}
-    </>
+    </Container>
   );
 }
 

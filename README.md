@@ -12,6 +12,17 @@ You can then use the following commands:
 - `npm run build` to create a production build
 - `npm run start` to start the production build
 
+# Technologies
+
+[![My Skills](https://skillicons.dev/icons?i=js)](https://skillicons.dev) 
+
+[![My Skills](https://skillicons.dev/icons?i=css)](https://skillicons.dev)
+
+[![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev)
+
+[![My Skills](https://skillicons.dev/icons?i=nextjs)](https://skillicons.dev)
+
+
 #### Home
 
 <img src="./public/spotlight.png">

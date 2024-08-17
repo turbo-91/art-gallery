@@ -12,6 +12,11 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const SpotlightWrapper = styled.div`
+  height: auto;
+  width: 60%;
+`;
+
 export default function SpotlightPage({
   pieces,
   artPiecesInfo,
@@ -24,15 +29,17 @@ export default function SpotlightPage({
 
   return (
     <Container>
-      <Spotlight
-        image={spotlightPiece.imageSource}
-        artist={spotlightPiece.artist}
-        isFavorite={
-          artPiecesInfo.find((piece) => piece.slug === spotlightPiece.slug)
-            ?.isFavorite
-        }
-        onToggleFavorite={() => onToggleFavorite(spotlightPiece.slug)}
-      />
+      <SpotlightWrapper>
+        <Spotlight
+          image={spotlightPiece.imageSource}
+          artist={spotlightPiece.artist}
+          isFavorite={
+            artPiecesInfo.find((piece) => piece.slug === spotlightPiece.slug)
+              ?.isFavorite
+          }
+          onToggleFavorite={() => onToggleFavorite(spotlightPiece.slug)}
+        />
+      </SpotlightWrapper>
     </Container>
   );
 }

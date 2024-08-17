@@ -15,9 +15,6 @@ const Container = styled.div`
 const SpotlightWrapper = styled.div`
   width: 60%;
   height: auto;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 `;
 
 export default function SpotlightPage({

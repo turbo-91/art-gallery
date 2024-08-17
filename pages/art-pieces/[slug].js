@@ -13,14 +13,6 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const DetailWrapper = styled.div`
-  width: 30%;
-  height: auto;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
 // function getIsFavoriteStatus(piece, artPiecesInfo, colors) {
 //   const hasFavoriteInfo = artPiecesInfo.find(
 //     (artPieceInfo) => artPieceInfo.slug === piece.slug

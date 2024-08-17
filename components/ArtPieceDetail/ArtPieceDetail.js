@@ -24,9 +24,7 @@ const Section = styled.section`
   text-align: left; /* Align text to the left */
   overflow: hidden;
   border: 1px solid black;
-   @media (max-width: 768px) {
-    margin-top: 5vh;
-  }
+   
   
 `;
 

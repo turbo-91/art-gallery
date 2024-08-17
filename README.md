@@ -1,6 +1,6 @@
-# my-gallery
+# art-gallery
 
-Project 5 using Nextjs.
+A simple website for an art gallery to showcase art works. The landing page randomly picks a spotlight piece. Art works can be favored and commented on. Project 5 of the Spiced Web Development bootcamp.
 
 ### Local development
 
@@ -15,22 +15,14 @@ You can then use the following commands:
 
 > 💡 This project requires a bundler. You can use `npm run dev` to start the development server. You can then view the project in the browser at `http://localhost:3000`. The Live Preview Extension for Visual Studio Code will **not** work for this project.
 
-### 🖥️ Desktop
-
 #### Home
 
-<img src="./public/screenshots/home.jpg">
+<img src="./public/spotlight.png">
 
 #### Gallery
 
-<img src="./public/screenshots/gallery.jpg">
+<img src="./public/pieces.png">
 
-### 📱 Mobile
+#### Favorite & comment features
 
-#### Home
-
-<img src="./public/screenshots/home_mobile.jpg" style="max-width:300px">
-
-#### Gallery
-
-<img src="./public/screenshots/gallery_mobile.jpg" style="max-width:300px">
+<img src="./public/favorite-comment.gif">

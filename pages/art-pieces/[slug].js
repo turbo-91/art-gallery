@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
   padding: 1vw;
   padding-bottom: 6vh;
@@ -15,9 +16,6 @@ const Container = styled.div`
 const DetailWrapper = styled.div`
   width: 60%;
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 // function getIsFavoriteStatus(piece, artPiecesInfo, colors) {

@@ -12,6 +12,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const DetailWrapper = styled.div`
+  width: 80%;
+  height: auto;
+`;
 
 // function getIsFavoriteStatus(piece, artPiecesInfo, colors) {
 //   const hasFavoriteInfo = artPiecesInfo.find(
@@ -34,21 +38,23 @@ function ArtPieceDetailPage({
   // const isFavorite = getIsFavoriteStatus(currentPiece, artPiecesInfo);
   return (
     <Container>
-      <ArtPieceDetail
-        image={currentPiece.imageSource}
-        title={currentPiece.name}
-        artist={currentPiece.artist}
-        year={currentPiece.year}
-        genre={currentPiece.genre}
-        isFavorite={
-          artPiecesInfo.find((piece) => piece.slug === currentPiece.slug)
-            ?.isFavorite
-        }
-        onToggleFavorite={() => onToggleFavorite(currentPiece.slug)}
-        addComment={addComment}
-        artPiecesInfo={artPiecesInfo}
-        colors={currentPiece.colors}
-      />
+      <DetailWrapper>
+        <ArtPieceDetail
+          image={currentPiece.imageSource}
+          title={currentPiece.name}
+          artist={currentPiece.artist}
+          year={currentPiece.year}
+          genre={currentPiece.genre}
+          isFavorite={
+            artPiecesInfo.find((piece) => piece.slug === currentPiece.slug)
+              ?.isFavorite
+          }
+          onToggleFavorite={() => onToggleFavorite(currentPiece.slug)}
+          addComment={addComment}
+          artPiecesInfo={artPiecesInfo}
+          colors={currentPiece.colors}
+        />
+      </DetailWrapper>
     </Container>
   );
 }

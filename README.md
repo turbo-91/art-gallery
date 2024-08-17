@@ -1,29 +1,36 @@
-# New Next Project
+# my-gallery
 
-This project was created from the Spiced Academy `next` template.
+Project 5 using Nextjs.
 
-You can download the project by running this command in your terminal:
+### Local development
 
-```bash
-npx -y ghcd@latest spiced-academy/fs-web-exercises/tree/main/templates/next my-app -i
-```
+To run project commands locally, you need to install the dependencies using `npm i` first.
 
-## Development
+You can then use the following commands:
 
-### Local Development
+- `npm run dev` to start the development server
+- `npm run build` to create a production build
+- `npm run start` to start the production build
+- `npm run test` to run the tests in watch mode (if available)
 
-To work locally, please install the dependencies using `npm i` first.
+> 💡 This project requires a bundler. You can use `npm run dev` to start the development server. You can then view the project in the browser at `http://localhost:3000`. The Live Preview Extension for Visual Studio Code will **not** work for this project.
 
-Run `npm run dev` to start a development server and open the displayed URL in a browser.
+### 🖥️ Desktop
 
-Use `npm run test` to run the tests.
+#### Home
 
-### Scripts
+<img src="./public/screenshots/home.jpg">
 
-You can use the following commands:
+#### Gallery
 
-- `npm run dev` to start a development server
-- `npm run build` to build the project
-- `npm run start` to start a production server
-- `npm run test` to run the tests
-- `npm run lint` to run the linter
+<img src="./public/screenshots/gallery.jpg">
+
+### 📱 Mobile
+
+#### Home
+
+<img src="./public/screenshots/home_mobile.jpg" style="max-width:300px">
+
+#### Gallery
+
+<img src="./public/screenshots/gallery_mobile.jpg" style="max-width:300px">

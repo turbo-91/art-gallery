@@ -21,12 +21,12 @@ const DetailWrapper = styled.div`
   }
 `;
 
-function getIsFavoriteStatus(piece, artPiecesInfo, colors) {
-  const hasFavoriteInfo = artPiecesInfo.find(
-    (artPieceInfo) => artPieceInfo.slug === piece.slug
-  );
-  return hasFavoriteInfo ? hasFavoriteInfo.isFavorite : false;
-}
+// function getIsFavoriteStatus(piece, artPiecesInfo, colors) {
+//   const hasFavoriteInfo = artPiecesInfo.find(
+//     (artPieceInfo) => artPieceInfo.slug === piece.slug
+//   );
+//   return hasFavoriteInfo ? hasFavoriteInfo.isFavorite : false;
+// }
 
 function ArtPieceDetailPage({
   pieces,
@@ -37,8 +37,9 @@ function ArtPieceDetailPage({
   // Dynamic Routing
   const router = useRouter();
   const { slug } = router.query;
-  const currentPiece = pieces.find((piece) => piece.slug === slug);
-  const isFavorite = getIsFavoriteStatus(currentPiece, artPiecesInfo);
+  const currentPiece = artPiecesInfo.find((piece) => piece.slug === slug);
+  console.log(currentPiece);
+  // const isFavorite = getIsFavoriteStatus(currentPiece, artPiecesInfo);
   return (
     <Container>
       <DetailWrapper>
@@ -48,8 +49,11 @@ function ArtPieceDetailPage({
           artist={currentPiece.artist}
           year={currentPiece.year}
           genre={currentPiece.genre}
-          isFavorite={isFavorite}
-          onToggleFavorite={onToggleFavorite}
+          isFavorite={
+            artPiecesInfo.find((piece) => piece.slug === currentPiece.slug)
+              ?.isFavorite
+          }
+          onToggleFavorite={() => onToggleFavorite(currentPiece.slug)}
           addComment={addComment}
           artPiecesInfo={artPiecesInfo}
           colors={currentPiece.colors}

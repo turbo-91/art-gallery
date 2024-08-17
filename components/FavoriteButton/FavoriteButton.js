@@ -17,7 +17,7 @@ function FavoriteButton({ isFavorite, onToggleFavorite }) {
   return (
     <Button onClick={onToggleFavorite}>
       {isFavorite ? (
-        <BookmarkCheck strokeWidth={1} size={50} />
+        <BookmarkCheck strokeWidth={1} size={40} />
       ) : (
         <Bookmark strokeWidth={1} size={40} />
       )}

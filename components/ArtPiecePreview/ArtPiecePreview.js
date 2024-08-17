@@ -52,8 +52,8 @@ function ArtPiecePreview({
 }) {
   return (
     <Section>
-      <Link href={`./art-pieces/${slug}`} key={slug}>
-        <ImageWrapper>
+      <ImageWrapper>
+        <Link href={`./art-pieces/${slug}`} key={slug}>
           <Image
             layout="responsive"
             alt={title}
@@ -61,14 +61,15 @@ function ArtPiecePreview({
             width={100}
             height={100}
           />
-          <IconWrapper>
-            <FavoriteButton
-              isFavorite={isFavorite}
-              onToggleFavorite={onToggleFavorite}
-            />
-          </IconWrapper>
-        </ImageWrapper>
-      </Link>
+        </Link>
+        <IconWrapper>
+          <FavoriteButton
+            isFavorite={isFavorite}
+            onToggleFavorite={onToggleFavorite}
+          />
+        </IconWrapper>
+      </ImageWrapper>
+
       <Artist>{artist}</Artist>
       <Title>{title}</Title>
     </Section>

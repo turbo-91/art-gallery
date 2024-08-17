@@ -20,7 +20,7 @@ const NavBar = styled.footer`
 
 const Title = styled.h1`
   font-family: Helvetica, Arial;
-  font-size: 1.3em;
+  font-size: 1.5em;
 
   color: #001233;
   text-align: justify;
@@ -30,7 +30,7 @@ const Title = styled.h1`
 
 const NavLink = styled(Link)`
   font-family: Helvetica, Arial;
-  font-size: 1em;
+  font-size: 1.3em;
   color: #001233;
   text-align: justify;
   text-decoration: none;

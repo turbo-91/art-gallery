@@ -3,7 +3,7 @@ import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 import styled from "styled-components";
 
 const Container = styled.div`
-  max-width: 30%;
+  max-width: 50%;
   margin: 0 auto;
   padding: 1vw;
   padding-bottom: 6vh;

@@ -2,19 +2,14 @@ import Spotlight from "@/components/Spotlight/Spotlight";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 100vh;
-  width: 40vw;
+  height: auto;
+  width: 50%;
   margin: 0 auto;
   padding: 1vw;
   padding-bottom: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const SpotlightWrapper = styled.div`
-  width: 60%;
-  height: auto;
 `;
 
 export default function SpotlightPage({
@@ -29,17 +24,15 @@ export default function SpotlightPage({
 
   return (
     <Container>
-      <SpotlightWrapper>
-        <Spotlight
-          image={spotlightPiece.imageSource}
-          artist={spotlightPiece.artist}
-          isFavorite={
-            artPiecesInfo.find((piece) => piece.slug === spotlightPiece.slug)
-              ?.isFavorite
-          }
-          onToggleFavorite={() => onToggleFavorite(spotlightPiece.slug)}
-        />
-      </SpotlightWrapper>
+      <Spotlight
+        image={spotlightPiece.imageSource}
+        artist={spotlightPiece.artist}
+        isFavorite={
+          artPiecesInfo.find((piece) => piece.slug === spotlightPiece.slug)
+            ?.isFavorite
+        }
+        onToggleFavorite={() => onToggleFavorite(spotlightPiece.slug)}
+      />
     </Container>
   );
 }

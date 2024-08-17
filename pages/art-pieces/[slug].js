@@ -13,8 +13,11 @@ const Container = styled.div`
   align-items: center;
 `;
 const DetailWrapper = styled.div`
-  width: 80%;
+  width: 60%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 // function getIsFavoriteStatus(piece, artPiecesInfo, colors) {

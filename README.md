@@ -23,14 +23,14 @@ You can then use the following commands:
 [![My Skills](https://skillicons.dev/icons?i=nextjs)](https://skillicons.dev)
 
 
-## Home
+## Homepage
 
 <img src="./public/spotlight.png">
 
-## Gallery
+## Pieces Page
 
 <img src="./public/pieces.png">
 
-#### Favorite & comment features
+## Favorite & comment features
 
 <img src="./public/favorite-comment.gif">

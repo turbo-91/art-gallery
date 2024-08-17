@@ -17,7 +17,10 @@ You can then use the following commands:
 
 #### Home
 
+<div style="background-color: #f0f0f0; padding: 10px;">
 <img src="./public/spotlight.png">
+</div>
+
 
 #### Gallery
 

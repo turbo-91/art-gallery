@@ -22,6 +22,7 @@ You can then use the following commands:
 
 [![My Skills](https://skillicons.dev/icons?i=nextjs)](https://skillicons.dev)
 
+[![My Skills](https://skillicons.dev/icons?i=vercel)](https://skillicons.dev)
 
 ## Homepage
 

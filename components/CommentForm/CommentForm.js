@@ -41,17 +41,29 @@ const Button = styled.button`
 function CommentForm({ addComment, artPiecesInfo, slug }) {
   function handleSubmit(event) {
     event.preventDefault();
-    const { comment } = event.target.elements;
-    addComment(slug, comment.value);
+    const { comment_content, comment_user } = event.target.elements;
+    let comment = {
+      user: comment_user.value,
+      content: comment_content.value,
+    };
+    addComment(slug, comment);
     event.target.reset();
+    console.log(comment);
   }
 
   return (
     <Form onSubmit={handleSubmit} aria-label="add comments about art piece">
       <Textarea
+        placeholder="Your name"
+        id="comment_user"
+        name="comment_user"
+        rows="1"
+        required
+      />
+      <Textarea
         placeholder="Add a comment"
-        id="comment"
-        name="comment"
+        id="comment_content"
+        name="comment_content"
         rows="3"
         required
       />

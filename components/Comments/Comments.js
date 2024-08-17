@@ -29,14 +29,8 @@ function Comments({ comments }) {
     <CommentsList>
       {comments.map((comment, index) => (
         <Container key={index}>
-          <Timestamp>
-            {Date(comment.timestamp).toLocaleString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </Timestamp>
-          <CommentItem>{comment}</CommentItem>
+          <Timestamp>{comment.user}:</Timestamp>
+          <CommentItem>{comment.content}</CommentItem>
         </Container>
       ))}
     </CommentsList>

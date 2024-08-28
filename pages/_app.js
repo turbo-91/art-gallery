@@ -19,11 +19,6 @@ export default function App({ Component, pageProps }) {
     fetcher
   );
 
-  /////// FAVOR ART PIECES /////////
-  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState("art-pieces", {
-    defaultValue: [],
-  });
-
   useEffect(() => {
     if (data && artPiecesInfo.length === 0) {
       setArtPiecesInfo(data);
@@ -37,6 +32,11 @@ export default function App({ Component, pageProps }) {
   if (error) {
     return <div>Error loading data</div>;
   }
+
+  /////// FAVOR ART PIECES /////////
+  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState("art-pieces", {
+    defaultValue: [],
+  });
 
   function handleToggleFavorite(slug) {
     // See if the art piece is already in the array
